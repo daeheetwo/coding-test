@@ -1,0 +1,21 @@
+a = 1000 - int(input())
+
+b = 0
+c = 0
+
+count = [500, 100, 50, 10, 5, 1]
+
+for i in count:
+    if a % i == 0:
+        b = a//i
+        c = b + c
+        break
+    elif a % i !=0:
+        b = a//i
+        a = a - b*i
+        c = b + c
+
+print(c)
+
+
+//https://www.acmicpc.net/problem/5585
