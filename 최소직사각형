@@ -1,0 +1,21 @@
+N = int(input())
+
+sizes = [list(map(int, input().split())) for _ in range(N)]
+
+k = [0 for _ in range(N)]
+
+a = []
+b = []
+for i in range(len(sizes)):
+    if sizes[i][0] > sizes[i][1]:
+        a.append(sizes[i][0])
+        b.append(sizes[i][1])
+
+    else:
+        a.append(sizes[i][1])
+        b.append(sizes[i][0])
+
+
+answer = max(a)*max(b)
+
+print(answer)
