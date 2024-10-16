@@ -1,0 +1,5 @@
+SELECT book.BOOK_ID, author.AUTHOR_NAME, date_format(book.PUBLISHED_DATE, '%Y-%m-%d') as PUBLISHED_DATE
+from book
+inner join author on book.AUTHOR_ID = author.AUTHOR_ID
+where book.category = '경제'
+order by book.published_date asc
